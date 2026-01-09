@@ -1,64 +1,25 @@
 # AgenWatch
 
-**Deterministic, runtime-governed execution for AI agents.**
+Runtime-enforced execution governance for AI agents.
 
-AgenWatch provides a low-level execution kernel that enforces hard limits
-(budget, iterations, time) **during execution**, not after failure.
+AgenWatch is a Python execution kernel that guarantees agents stop when they must.
+Budgets, iteration limits, and execution boundaries are enforced at runtime —
+before tools or LLM calls occur.
 
-This answers a single production-critical question:
+## What We Build
+- Deterministic execution kernels for AI agents
+- Runtime-enforced budget and iteration limits
+- Governance layers for agent frameworks
 
-> *"Can I mathematically guarantee this agent will stop?"*
+## What We Don’t Build
+- Prompt frameworks
+- UI dashboards
+- Agent orchestration platforms
 
----
+## How It’s Used
+AgenWatch is designed to sit underneath frameworks like LangChain or CrewAI,
+providing hard execution guarantees while they handle reasoning and workflows.
 
-## Why AgenWatch Exists
-
-Most agent frameworks focus on *reasoning quality* and *observability*.
-AgenWatch focuses on **governance**.
-
-We built AgenWatch for teams who need:
-- Hard execution guarantees
-- Deterministic, replayable behavior
-- Protection against runaway agents in production
-
----
-
-## What Makes AgenWatch Different
-
-- **Runtime-enforced guardrails**  
-  Budget, iteration, and timeout limits are enforced synchronously by the kernel.
-
-- **Deterministic execution**  
-  Same inputs → same execution path → same outcome.
-
-- **Kernel-first architecture**  
-  Governance is not optional and cannot be bypassed from the SDK layer.
-
-AgenWatch is intentionally minimal.  
-It is designed to be a **foundation**, not a framework zoo.
-
----
-
-## Status
-
-- PyPI: https://pypi.org/project/agenwatch/
-- Language: Python 3.10+
-- Maturity: v0.1.0 (stable core, focused scope)
-
----
-
-## Repositories
-
-- **agenwatch** → Core SDK and execution kernel  
-  https://github.com/agenwatch/agenwatch
-
----
-
-## Philosophy
-
-AgenWatch is built for **production agents**, not demos.
-
-If you need smarter agents, there are many tools.  
-If you need **governable agents**, this is where the conversation starts.
-
-
+## Learn More
+→ SDK & Docs: https://github.com/agenwatch/agenwatch  
+→ Architecture: https://github.com/agenwatch/agenwatch/blob/main/ARCHITECTURE.md
